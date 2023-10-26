@@ -116,7 +116,7 @@ export class GihyoEcsStack extends cdk.Stack {
     });
     service.attachToApplicationTargetGroup(targetGroup);
 
-    new cdk.CfnOutput(this, 'LoadBalancerDNS', {
+    new cdk.CfnOutput(this, 'EndpointURL', {
       value: `http://${alb.loadBalancerDnsName}`,
       description: 'The endpoint URL',
     });
